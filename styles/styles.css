@@ -1,0 +1,201 @@
+@import url("reset.css");
+@import url("https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap");
+@font-face {
+  font-family: 'NorseBold'; /* Define a name for the font */
+  src: url('fonts/Norse-Bold.otf') format('opentype'); /* Specify the font file path and format */
+  font-weight: bold; /* Font weight */
+  font-style: normal; /* Font style */
+}
+
+:root {
+  --light-clr: #fff;
+  --light-clr-2: #E5E7EB;
+  --body-bg-clr: #f3f3f3;
+  --border-light-clr:#E5E7EB;
+  --border-focus-clr:#0039aa;
+  --border-error-clr:#f50202;
+  --btn-clr:#00627a;
+  --btn-hover:#003644 ;
+  --body-font: "Poppins", sans-serif;
+  --body-font-weight: 600;
+  --logo-font:"NorseBold";
+}
+
+label{
+  display: block;
+  text-transform: uppercase;
+  margin-top: 0.5em;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--body-font);
+  background-color: var(--body-bg-clr);
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* Split into two columns of equal width */
+  width: 100%;
+}
+
+.grid-container .container {
+  height: 100vh; /* 100% of viewport height */
+  overflow: hidden; /* Hide any overflow */
+  position: relative; /* Establish positioning context */
+}
+
+.logo {
+  background-color: rgba(0, 0, 0, 0.7); /* Dark semi-transparent background */
+  width: 100%; /* Cover the entire container */
+  height: 20%; /* 20% of viewport height */
+  position: relative;
+  top: 20vh;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  font-family: var(--logo-font);
+  color: var(--light-clr);
+  font-size: 5em;
+}
+
+.logo-img {
+  max-width: 100%; /* Ensure logo doesn't exceed container width */
+  max-height: 75%; /* Ensure logo doesn't exceed container height */
+}
+
+.container:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+}
+
+.container .bg-img {
+  position: absolute; /* Position within the container */
+  top: 50%; /* Vertically center the image */
+  transform: translateY(-50%); /* Adjust for vertical centering */
+  z-index: -1;
+  width: 100%; /* Take full width of container */
+  height: 100%;
+}
+
+/* CSS styles for the image caption */
+.image-caption {
+  position: absolute; /* Position the caption absolutely */
+  bottom: 0; /* Stick it to the bottom of the container */
+  left: 0; /* Align it with the left edge of the container */
+  width: 100%; /* Take the full width of the container */
+  color: #fff; /* White text color */
+  text-align: center; /* Center-align the text */
+  padding: 8px 0; /* Add some padding for better visibility */
+  font-size: 0.85rem; /* Adjust the font size as needed */
+}
+
+/* Set a maximum width for the caption to prevent it from stretching too wide */
+.image-caption a {
+  max-width: 100%;
+  color: #fff;
+  text-decoration: underline;
+}
+
+
+.header__description, legend {
+  font-size: 1.35rem;
+  font-weight: var(--body-font-weight);
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+  background-color: var(--light-clr);
+  padding-top: 2.5em;
+  padding-bottom: .2em;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.form-container {
+  display: flex;
+  align-items: center;
+  gap: 4em;
+  padding-bottom: .5rem;
+}
+
+.form-container, .header__description, legend {
+  /* padding: .5rem 10.5rem .5rem 2.5rem; */
+  padding-left: 2.5rem;
+  padding-right: 10.5rem;
+  padding-bottom: 1.3rem;
+  margin: 0;
+}
+
+legend {
+  position: relative;
+  top: 1.8em;
+}
+
+label {
+  font-size: .8rem;
+  font-weight: var(--body-font-weight);
+  letter-spacing: 2px;
+}
+
+input {
+  margin-bottom: .5em;
+  width: 17rem;
+  border-radius: 4px;
+  border: 1px solid var(--light-clr-2);
+}
+
+/* Style for focused input */
+input:focus {
+  border: 1px solid var(--border-focus-clr); /* Blue border color */
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Style for input with an error (add this class dynamically) */
+input.error {
+  border: 2px solid var(--border-error-clr); /* Red border color */
+}
+
+.error-container {
+  height: .9em; /* Set a fixed height for the error container */
+  overflow: hidden; /* Hide the overflow of error messages */
+  transition: height 0.3s ease-in-out; /* Add a smooth transition effect */
+}
+
+.error-message {
+  color: red;
+  font-size: 0.5em; /* Adjust the font size as needed */
+  display: block; /* Display each error message on a new line */
+  margin-top: 5px; /* Add some spacing to separate the input and error message */
+}
+
+#submit {
+  padding: .5em 2em;
+  margin-left: 2.5rem;
+  margin-top:1.2rem;
+  font-weight: bold;
+  color: var(--light-clr-2);
+  background-color: var(--btn-clr);
+  border-radius: 6px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s, box-shadow 0.3s; /* Add smooth transitions */
+}
+
+#submit:hover {
+  background-color: var(--btn-hover); /* Change the background color on hover */
+  box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.3); /* Add a slightly larger shadow on hover */
+}
+
+footer {
+  padding:.5rem 2.5rem ;
+  font-weight: bold;
+}
+
+footer a {
+  margin-left: .2rem;
+  color: var(--btn-clr);
+}

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="keywords" content="Form,Example, HTML, CSS" />
+    <meta
+      name="description"
+      content="Form example made for The Odin Project curriculum"
+    />
+    <meta name="author" content="Matheus P. C. Silva" />
+    <title>Form</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+  </head>
+  <body>
+    <main id="main" class="grid-container">
+      <div class="container" id="pic-container">
+        <picture>
+          <img class="bg-img" src="assets/julia.jpg" alt="the ocean" />
+        </picture>
+
+        <div class="logo">
+          <img src="assets/odin-lined.png" alt="TOP-logo" class="logo-img" />
+          <span class="logo-text">ODIN</span>
+        </div>
+
+        <p class="image-caption"></p>
+      </div>
+
+      <div class="container">
+        <header id="header">
+          <p class="header__description">
+            This is not a real online service! You know you need something like
+            this in your life to help you realize your most wildest dreams. Sign
+            up <em>now</em> to get started!
+          </p>
+          <p class="header__description">You <em>know</em> you want to!</p>
+        </header>
+        <form method="post" id="survey-form">
+          <fieldset>
+            <legend>Let's do This</legend>
+
+            <div class="form-container">
+              <div class="col">
+                <label id="name-label" for="name"
+                  >First name
+                  <span class="required"> (required) </span>
+                </label>
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  placeholder="Bruce"
+                  required=""
+                />
+                <div class="error-container">
+                  <span id="name-error" class="error-message"></span>
+                </div>
+
+                <label id="email-label" for="email"
+                  >Email
+                  <span class="required"> (required) </span>
+                </label>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="email@example.com"
+                  required=""
+                />
+                <div class="error-container">
+                  <span id="email-error" class="error-message"></span>
+                </div>
+
+                <label id="password-label" for="password"
+                  >Password
+                  <span class="required">(required)</span>
+                </label>
+                <input
+                  type="password"
+                  name="password"
+                  id="password"
+                  class=""
+                  required
+                />
+                <div class="error-container">
+                  <span id="password-error" class="error-message"></span>
+                </div>
+              </div>
+              <div class="col">
+                <label id="last-name-label" for="last-name"
+                  >Last name
+                  <span class="required"> (required) </span>
+                </label>
+                <input
+                  type="text"
+                  name="last-name"
+                  id="last-name"
+                  placeholder="Wayne"
+                  required=""
+                />
+                <div class="error-container">
+                  <span id="last-name-error" class="error-message"></span>
+                </div>
+
+                <label id="phone-label" for="phone"
+                  >Phone number
+                  <span class="required">(required)</span>
+                </label>
+                <input
+                  type="tel"
+                  name="phone"
+                  id="phone"
+                  placeholder="(+00) 99999-9999"
+                />
+                <div class="error-container">
+                  <span id="phone-error" class="error-message"></span>
+                </div>
+
+                <label
+                  id="password-confirmation-label"
+                  for="password-confirmation"
+                  >Confirm Password
+                  <span class="required">(required)</span>
+                </label>
+                <input
+                  type="password"
+                  name="password-confirmation"
+                  id="password-confirmation"
+                  class=""
+                  required
+                />
+                <div class="error-container">
+                  <span
+                    id="password-confirmation-error"
+                    class="error-message"
+                  ></span>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+          <button type="submit" id="submit">Create Account</button>
+        </form>
+
+        <footer>
+          <p>Already have an account?<a href="">Log in</a></p>
+        </footer>
+      </div>
+    </main>
+    <script src="js/script.js"></script>
+  </body>
+</html>
